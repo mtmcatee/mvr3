@@ -19,3 +19,4 @@ Register-ScheduledTask `
     -Action $taskAction `
     -Trigger $taskTrigger `
     -Description $description
+    -$principal = New-ScheduledTaskPrincipal -UserID "NT AUTHORITY\SYSTEM" -LogonType ServiceAccount -RunLevel Highest
