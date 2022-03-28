@@ -19,4 +19,4 @@ Register-ScheduledTask `
     -Action $taskAction `
     -Trigger $taskTrigger `
     -Description $description
-    -$principal = New-ScheduledTaskPrincipal -LogonType S4U -RunLevel Highest
+    -principal = New-ScheduledTaskPrincipal -LogonType S4U -RunLevel Highest
