@@ -2,7 +2,7 @@
 $taskName = "Shutdown Computer"
 
 # Describe the scheduled task.
-$description = "Shuts computer down daily at 2300 MTN"
+$description = "Shuts computer down daily at 2200 CDT"
 
 # Create a new task action
 $taskAction = New-ScheduledTaskAction `
@@ -10,7 +10,7 @@ $taskAction = New-ScheduledTaskAction `
     -Argument 'Stop-Computer -Force'
 
 #Create task trigger
-$taskTrigger = New-ScheduledTaskTrigger -Daily -At 9PM
+$taskTrigger = New-ScheduledTaskTrigger -Daily -At 10PM
 
 # Register the new PowerShell scheduled task
 # Register the scheduled task
