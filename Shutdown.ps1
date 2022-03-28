@@ -1,22 +1,11 @@
-# The name of your scheduled task.
-$taskName = "Shutdown Computer"
+# Set the scheduled task time and repitition
+$TaskTime = New-ScheduledTaskTrigger -Daily -At 12:00
 
-# Describe the scheduled task.
-$description = "Shuts computer down daily at 10 CDT"
+# Set  the task to run as a local administrator with highest level privileges
+$TaskUser = New-ScheduledTaskPrincipal -GroupId "BUILTIN\Administrators" -RunLevel Highest
 
-# Create a new task action
-$taskAction = New-ScheduledTaskAction `
-    -Execute 'powershell.exe' `
-    -Argument 'Stop-Computer -Force'
+# Set actions the schedule task should perform
+$Action1 = New-ScheduledTaskAction -Execute 'powershell.exe' -Argument 'Stop-Computer -Force'
 
-#Create task trigger
-$taskTrigger = New-ScheduledTaskTrigger -Daily -At 11:57AM
-
-# Register the new PowerShell scheduled task
-# Register the scheduled task
-Register-ScheduledTask `
-    -TaskName $taskName `
-    -Action $taskAction `
-    -Trigger $taskTrigger `
-    -Description $description
-    -principal = New-ScheduledTaskPrincipal -RunLevel Highest
+# Registers the task with Task Scheduler
+Register-ScheduledTask "Test Scheduled Task" -Action $Action1 -Principal $TaskUser
