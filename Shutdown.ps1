@@ -10,7 +10,7 @@ $taskAction = New-ScheduledTaskAction `
     -Argument 'Stop-Computer -Force'
 
 #Create task trigger
-$taskTrigger = New-ScheduledTaskTrigger -Daily -At 10:30AM
+$taskTrigger = New-ScheduledTaskTrigger -Daily -At 10PM
 
 # Register the new PowerShell scheduled task
 # Register the scheduled task
