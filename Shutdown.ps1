@@ -2,7 +2,7 @@
 $taskName = "Shutdown Computer"
 
 # Describe the scheduled task.
-$description = "Shuts computer down daily at 2200 CDT"
+$description = "Shuts computer down daily at 1030 CDT"
 
 # Create a new task action
 $taskAction = New-ScheduledTaskAction `
