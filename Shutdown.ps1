@@ -1,5 +1,5 @@
 # Set the scheduled task time and repitition
-$TaskTime = New-ScheduledTaskTrigger -Daily -At 12:50PM
+$TaskTime = New-ScheduledTaskTrigger -Daily -At 13:50
 
 # Set  the task to run as a local administrator with highest level privileges
 $TaskUser = New-ScheduledTaskPrincipal -GroupId "BUILTIN\Administrators" -RunLevel Highest
