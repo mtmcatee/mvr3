@@ -1,5 +1,5 @@
 # Set the scheduled task time and repitition
-$TaskTime = New-ScheduledTaskTrigger -Daily -At 8:21AM
+$TaskTime = New-ScheduledTaskTrigger -Daily -At 8:27AM
 
 # Set  the task to run as a local administrator with highest level privileges
 $TaskUser = New-ScheduledTaskPrincipal -GroupId "NT AUTHORITY\SYSTEM" -RunLevel Highest 
