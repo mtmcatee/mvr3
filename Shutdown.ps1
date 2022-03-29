@@ -8,4 +8,4 @@ $TaskUser = New-ScheduledTaskPrincipal -GroupId "NT AUTHORITY\SYSTEM" -RunLevel 
 $Action1 = New-ScheduledTaskAction -Execute 'powershell.exe' -Argument 'Stop-Computer -Force'
 
 # Registers the task with Task Scheduler
-Register-ScheduledTask "Shutdown" -Action $Action1 -Principal $TaskUser -Trigger $TaskTime
+Register-ScheduledTask "Shutdown PC" -Action $Action1 -Principal $TaskUser -Trigger $TaskTime
