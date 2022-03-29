@@ -2,7 +2,7 @@
 $TaskTime = New-ScheduledTaskTrigger -Daily -At 10:00PM
 
 # Set  the task to run as a local administrator with highest level privileges
-$TaskUser = New-ScheduledTaskPrincipal -GroupId "NT AUTHORITY\SYSTEM" -RunLevel Highest -LogonType ServiceAccount
+$TaskUser = New-ScheduledTaskPrincipal -GroupId "NT AUTHORITY\SYSTEM" -RunLevel Highest 
 
 # Set actions the schedule task should perform
 $Action1 = New-ScheduledTaskAction -Execute 'powershell.exe' -Argument 'Stop-Computer -Force'
