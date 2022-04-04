@@ -9,4 +9,3 @@ $Action1 = New-ScheduledTaskAction -Execute 'powershell.exe' -Argument 'Stop-Com
 
 # Registers the task with Task Scheduler
 Register-ScheduledTask "Shutdown PC" -Action $Action1 -Principal $TaskUser -Trigger $TaskTime
-Start-Sleep -Seconds 5
