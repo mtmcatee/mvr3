@@ -1,1 +1,1 @@
-Remove-Service -Name "IBSA"
+sc.exe delete "IBSA"
