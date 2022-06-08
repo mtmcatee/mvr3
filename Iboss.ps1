@@ -1,1 +1,1 @@
-sc.exe delete "IBSA"
+sc.exe delete "IbsaService.exe"
