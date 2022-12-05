@@ -1,1 +1,2 @@
-Unregister-ScheduledTask -Shutdown PC applog -Confirm:$false
+Get-ScheduledTask -TaskName "Shutdown PC"
+Unregister-ScheduledTask -TaskName "Shutdown PC" -Confirm:$false
