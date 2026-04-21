@@ -1,0 +1,1 @@
+slmgr.vbs /ipk N2FQC-Q67JC-2V7XP-WHMQT-2BC48
