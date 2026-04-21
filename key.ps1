@@ -4,7 +4,7 @@
 # - Activates Windows
 # ==========================================================
 
-$ProductKey = "RD2PN-V22GV-FQWF6-6W6Q8-6MWR2" 
+$ProductKey = "4Q3X9-TNDQB-XJV86-KHKRH-B7YJ2" 
 $LogPath = "C:\ProgramData\Faronics\Logs\Win10_License_Extension.log"
 
 function Write-Log {
